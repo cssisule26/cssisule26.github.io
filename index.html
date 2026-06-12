@@ -39,7 +39,7 @@
     }
 
     .container {
-      width: min(1120px, 92%);
+      width: min(960px, 88%);
       margin: 0 auto;
     }
 
@@ -198,8 +198,8 @@
 
     /* SECTIONS */
 
-    section {
-      padding: 110px 0;
+      section {
+      padding: 88px 0;
       border-top: 1px solid var(--line);
     }
 
@@ -335,44 +335,43 @@
     }
 
     /* CONTACT */
-
+    
     .contact {
-      min-height: 70vh;
+      min-height: 55vh;
       display: flex;
       align-items: center;
     }
-
+    
     .contact-box {
-      width: 100%;
+      width: min(760px, 100%);
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: end;
+      gap: 36px;
     }
-
+    
     .contact h2 {
-      font-size: clamp(3rem, 7vw, 6.5rem);
-      line-height: 0.95;
-      letter-spacing: -0.08em;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
       font-weight: 500;
+      max-width: 680px;
     }
-
+    
     .contact-links {
       display: grid;
-      gap: 14px;
-      justify-self: end;
-      width: min(380px, 100%);
+      gap: 10px;
+      width: min(420px, 100%);
     }
-
+    
     .contact-links a {
       border-bottom: 1px solid var(--line);
-      padding: 14px 0;
+      padding: 12px 0;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
       transition: 0.2s ease;
     }
-
+    
     .contact-links a:hover {
       color: var(--text);
       border-color: var(--text);
