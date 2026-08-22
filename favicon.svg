@@ -1,26 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 32 32"
+     viewBox="0 0 40 40"
      shape-rendering="crispEdges">
-  <title>Pixel Earth</title>
 
-  <!-- Pixel outline -->
-  <path
-    fill="#171317"
-    d="M8 0h16v4h4v4h4v16h-4v4h-4v4H8v-4H4v-4H0V8h4V4h4z"
-  />
+  <!-- Stepped black outline -->
+  <path fill="#171717"
+    d="M12 0h16v4h4v4h4v4h4v16h-4v4h-4v4h-4v4H12v-4H8v-4H4v-4H0V12h4V8h4V4h4z"/>
 
-  <!-- Ocean -->
-  <path
-    fill="#7ec8e8"
-    d="M8 4h16v4h4v16h-4v4H8v-4H4V8h4z"
-  />
+  <!-- Blue ocean -->
+  <path fill="#80c9eb"
+    d="M12 4h16v4h4v4h4v16h-4v4h-4v4H12v-4H8v-4H4V12h4V8h4z"/>
 
-  <!-- Land -->
-  <path
-    fill="#59ad50"
-    d="M8 4h8v4h-4v4H8v4H4V8h4z
-       M20 4h4v4h4v4h-8z
-       M16 12h8v4h4v8h-4v-4h-4v-4h-4z
-       M4 16h8v4h4v4h-4v4H8v-4H4z"
-  />
+  <!-- Green continents -->
+  <path fill="#50ad4f"
+    d="
+      M12 4h8v8h-4v4H8v4H4v-8h4V8h4z
+
+      M24 4h4v4h4v4h4v4h-8v4h-8v-8h4z
+
+      M8 16h8v4h4v8h-4v8H8v-4H4V20h4z
+
+      M28 20h8v8h-4v-4h-4z
+    "/>
 </svg>
