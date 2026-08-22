@@ -1,494 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chelsea Sisule</title>
-
-  <style>
-    :root {
-      --bg: #060708;
-      --text: #f4f4f5;
-      --muted: #a1a1aa;
-      --soft: #d4d4d8;
-      --line: #27272a;
-      --card: #0d0f12;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
-      letter-spacing: -0.01em;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      width: min(780px, 88%);
-      margin: 0 auto;
-      padding: 34px 0 56px;
-    }
-
-    /* TOP BAR */
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      padding-bottom: 88px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .name {
-      color: var(--text);
-      letter-spacing: 0.03em;
-    }
-
-    .links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .links a {
-      color: var(--muted);
-      transition: color 0.18s ease;
-    }
-
-    .links a:hover {
-      color: var(--text);
-    }
-
-    /* INTRO */
-
-    .intro {
-      padding-bottom: 80px;
-    }
-
-    .intro h1 {
-      font-size: clamp(2.8rem, 8vw, 5.6rem);
-      line-height: 0.95;
-      letter-spacing: -0.08em;
-      font-weight: 520;
-      max-width: 760px;
-      margin-bottom: 28px;
-    }
-
-    .intro p {
-      max-width: 620px;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .intro p strong {
-      color: var(--soft);
-      font-weight: 450;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 42px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-title {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 24px;
-      margin-bottom: 26px;
-    }
-
-    .section-title h2 {
-      color: var(--muted);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-weight: 500;
-    }
-
-    .section-title p {
-      color: var(--soft);
-      font-size: 1.15rem;
-      line-height: 1.45;
-      max-width: 620px;
-    }
-
-    /* ITEMS */
-
-    .stack {
-      display: grid;
-      gap: 14px;
-    }
-
-    .item {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 24px;
-      padding: 18px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .item:first-child {
-      border-top: none;
-      padding-top: 0;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    .item h3 {
-      font-size: 1.05rem;
-      font-weight: 500;
-      margin-bottom: 6px;
-      color: var(--text);
-    }
-
-    .item p {
-      color: var(--muted);
-      font-size: 0.96rem;
-      max-width: 620px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 12px;
-    }
-
-    .tag {
-      color: var(--muted);
-      border: 1px solid var(--line);
-      padding: 4px 8px;
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding-top: 28px;
-      color: var(--muted);
-      font-size: 0.85rem;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    footer a {
-      color: var(--soft);
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 680px) {
-      .page {
-        width: min(100% - 34px, 780px);
-        padding-top: 26px;
-      }
-
-      .topbar {
-        align-items: flex-start;
-        flex-direction: column;
-        padding-bottom: 64px;
-      }
-
-      .links {
-        gap: 14px;
-      }
-
-      .section-title,
-      .item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-
-      .intro {
-        padding-bottom: 64px;
-      }
-
-      section {
-        padding: 36px 0;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <main class="page">
-    <header class="topbar">
-      <a class="name" href="#">Chelsea Sisule</a>
-
-      <nav class="links" aria-label="External links">
-        <a href="mailto:cssisule@yahoo.com">Email</a>
-        <a href="https://www.linkedin.com/in/chelsea-sisule/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/cssisule26" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </nav>
-    </header>
-
-    <section class="intro" aria-label="Introduction">
-      <h1>Computational chemistry, AI, and drug discovery.</h1>
-      <p>
-        I’m a Rutgers student working across <strong>machine learning, quantum chemistry,
-        molecular modeling, and translational research</strong>. I’m interested in building
-        scientific tools that make early-stage discovery faster, more rigorous, and more useful.
-      </p>
-    </section>
-
-    <section aria-label="About">
-      <div class="section-title">
-        <h2>About</h2>
-        <p>
-          My work sits between research and engineering: building ML pipelines, modeling
-          molecular systems, and translating scientific ideas into usable products.
-        </p>
-      </div>
-    </section>
-
-    <section aria-label="Projects">
-      <div class="section-title">
-        <h2>Projects</h2>
-        <p>Selected technical work across AI, chemistry, and scientific computing.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#362b31" />
+    <meta
+      name="description"
+      content="Chelsea Sisule — chemical biology, quantum science, and computational drug discovery."
+    />
+    <meta property="og:title" content="Chelsea Sisule Portfolio" />
+    <meta
+      property="og:description"
+      content="Researcher and builder working across chemistry, quantum science, and drug discovery."
+    />
+    <meta property="og:type" content="website" />
+    <title>Chelsea Sisule Portfolio</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="preload" href="assets/earth-poster.jpg" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="portfolio-shell">
+      <div class="outer-stars" aria-hidden="true">
+        <span class="star star-1"></span>
+        <span class="star star-2"></span>
+        <span class="star star-3"></span>
+        <span class="star star-4"></span>
+        <span class="star star-5"></span>
+        <span class="star star-6"></span>
+        <span class="star star-7"></span>
+        <span class="star star-8"></span>
+        <span class="star star-9"></span>
+        <span class="star star-10"></span>
+        <span class="star star-11"></span>
+        <span class="star star-12"></span>
+        <span class="star star-13"></span>
+        <span class="star star-14"></span>
+        <span class="star star-15"></span>
+        <span class="star star-16"></span>
+        <span class="star star-17"></span>
+        <span class="star star-18"></span>
+        <span class="star star-19"></span>
+        <span class="star star-20"></span>
+        <span class="star star-21"></span>
+        <span class="star star-22"></span>
+        <span class="star star-23"></span>
+        <span class="star star-24"></span>
       </div>
 
-      <div class="stack">
-        <article class="item">
-          <div class="meta">AI / Chemistry</div>
-          <div>
-            <h3>NNRTI Molecular Generation</h3>
-            <p>
-              Modeled novel HIV-1 non-nucleoside reverse transcriptase inhibitor candidates
-              using diffusion-based molecular generation and cheminformatics workflows.
-            </p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">RDKit</span>
-              <span class="tag">Diffusion</span>
-              <span class="tag">Drug Discovery</span>
-            </div>
+      <header class="topbar">
+        <span aria-hidden="true"></span>
+
+        <nav class="section-nav" aria-label="Portfolio sections" role="tablist">
+          <button class="nav-link is-active" type="button" role="tab" aria-selected="true" aria-controls="home-panel" id="home-tab" data-section="home">home</button>
+          <button class="nav-link" type="button" role="tab" aria-selected="false" aria-controls="about-panel" id="about-tab" data-section="about">about</button>
+          <button class="nav-link" type="button" role="tab" aria-selected="false" aria-controls="projects-panel" id="projects-tab" data-section="projects">projects</button>
+          <button class="nav-link" type="button" role="tab" aria-selected="false" aria-controls="work-panel" id="work-tab" data-section="work">work</button>
+        </nav>
+
+        <button
+          class="sound-toggle"
+          id="sound-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Play background music"
+        >
+          <svg aria-hidden="true" class="speaker-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 10V14H7L11 18V6L7 10H4Z" fill="currentColor"></path>
+            <g id="speaker-muted">
+              <path d="M15 10L20 15" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+              <path d="M20 10L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+            </g>
+            <g id="speaker-playing" hidden>
+              <path d="M14 9C15.35 10.05 15.35 13.95 14 15" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+              <path d="M17 6C20.35 9.1 20.35 14.9 17 18" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+            </g>
+          </svg>
+        </button>
+      </header>
+
+      <section class="content-space is-home" id="content-space" aria-live="polite">
+        <div class="site-panel home-scene" id="home-panel" role="tabpanel" aria-labelledby="home-tab" data-panel="home">
+          <video
+            class="earth-film"
+            src="assets/earth-portfolio.mp4"
+            poster="assets/earth-poster.jpg"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            aria-label="Looping pixel-art animation of Earth in space"
+          ></video>
+        </div>
+
+        <section class="site-panel about-section" id="about-panel" role="tabpanel" aria-labelledby="about-tab" data-panel="about" hidden>
+          <p class="eyebrow">HELLO, WORLD.</p>
+          <h1>Chelsea Sisule</h1>
+          <p class="about-line">Chemical biology, quantum science, and computational drug discovery.</p>
+          <p class="about-detail">I build across disciplines—using chemistry, computation, and ambitious scientific questions to explore what might be possible next.</p>
+          <p class="location">NEW BRUNSWICK, NJ · EARTH</p>
+        </section>
+
+        <section class="site-panel projects-section" id="projects-panel" role="tabpanel" aria-labelledby="projects-tab" data-panel="projects" hidden>
+          <div class="section-heading">
+            <p class="eyebrow">SELECTED TRANSMISSIONS</p>
+            <h2>Projects</h2>
           </div>
-        </article>
 
-        <article class="item">
-          <div class="meta">ML / Research</div>
-          <div>
-            <h3>cART Optimization Pipeline</h3>
-            <p>
-              Developed machine learning pipelines for computational optimization of
-              combination antiretroviral therapy regimens using molecular dynamics-informed data.
-            </p>
-            <div class="tags">
-              <span class="tag">ML</span>
-              <span class="tag">Molecular Dynamics</span>
-              <span class="tag">HIV-1</span>
-            </div>
+          <div class="project-grid">
+            <article class="project-item">
+              <p class="project-index">01</p>
+              <p class="project-tag">ONCOLOGY · MACHINE LEARNING</p>
+              <h3>Pythias</h3>
+              <p class="project-description">A failure-prediction platform for small-molecule oncology programs, beginning with KRAS G12C inhibitors.</p>
+              <ul class="chip-list" aria-label="Pythias technologies">
+                <li>Python</li><li>PyTorch</li><li>RDKit</li><li>scikit-learn</li>
+              </ul>
+              <a class="github-link" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="Pythias placeholder GitHub link">github <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="project-item">
+              <p class="project-index">02</p>
+              <p class="project-tag">GENERATIVE CHEMISTRY · HIV</p>
+              <h3>NNRTI Discovery</h3>
+              <p class="project-description">A molecular generation and screening pipeline spanning curated chemical data, Quetzal, similarity, and docking.</p>
+              <ul class="chip-list" aria-label="NNRTI Discovery technologies">
+                <li>Python</li><li>PyTorch</li><li>RDKit</li><li>AutoDock Vina</li>
+              </ul>
+              <a class="github-link" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="NNRTI Discovery placeholder GitHub link">github <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="project-item">
+              <p class="project-index">03</p>
+              <p class="project-tag">FULL-STACK · AI</p>
+              <h3>TherapyBuddy</h3>
+              <p class="project-description">A supportive daily companion built around journaling, goals, reflection, voice, and AI-generated weekly insights.</p>
+              <ul class="chip-list" aria-label="TherapyBuddy technologies">
+                <li>React</li><li>TypeScript</li><li>FastAPI</li><li>Gemini</li>
+              </ul>
+              <a class="github-link" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="TherapyBuddy placeholder GitHub link">github <span aria-hidden="true">↗</span></a>
+            </article>
           </div>
-        </article>
+        </section>
 
-        <article class="item">
-          <div class="meta">Startup</div>
-          <div>
-            <h3>AI Internship Platform</h3>
-            <p>
-              Developed an early technical direction for an NSF I-Corps project using AI,
-              feedback loops, and networking workflows to help students secure first internships.
-            </p>
-            <div class="tags">
-              <span class="tag">NSF I-Corps</span>
-              <span class="tag">Product</span>
-              <span class="tag">AI</span>
-            </div>
+        <section class="site-panel work-section" id="work-panel" role="tabpanel" aria-labelledby="work-tab" data-panel="work" hidden>
+          <div class="section-heading work-heading">
+            <p class="eyebrow">EXPERIENCE LOG</p>
+            <h2>Work</h2>
           </div>
-        </article>
-      </div>
-    </section>
 
-    <section aria-label="Research">
-      <div class="section-title">
-        <h2>Research</h2>
-        <p>Current and previous research appointments.</p>
-      </div>
+          <div class="timeline">
+            <article class="timeline-row">
+              <p class="timeline-year">NOW</p>
+              <div class="timeline-copy">
+                <div class="timeline-main">
+                  <h3>Chemical Biology Researcher</h3>
+                  <p class="timeline-place">Rutgers University · Bello Lab + Sun Lab</p>
+                </div>
+                <p class="timeline-detail">Drug discovery, computational chemistry, and quantum methods.</p>
+                <ul class="chip-list skill-list" aria-label="Chemical Biology Researcher skills">
+                  <li>RDKit</li><li>PySCF</li><li>Molecular Modeling</li><li>Wet Lab</li>
+                </ul>
+              </div>
+            </article>
 
-      <div class="stack">
-        <article class="item">
-          <div class="meta">Summer 2026</div>
-          <div>
-            <h3>AI Research Fellow · Rutgers RAD Collaboratory</h3>
-            <p>
-              Selected for a Chancellor’s Office-funded AI and Data Science fellowship.
-              Built ML pipelines for antiretroviral therapy optimization and modeled NNRTI
-              candidates for HIV-1 drug discovery.
-            </p>
+            <article class="timeline-row">
+              <p class="timeline-year">2026</p>
+              <div class="timeline-copy">
+                <div class="timeline-main">
+                  <h3>Quantum Research Intern</h3>
+                  <p class="timeline-place">Microsoft Quantum</p>
+                </div>
+                <p class="timeline-detail">Industry research at the boundary of chemistry and quantum computing.</p>
+                <ul class="chip-list skill-list" aria-label="Quantum Research Intern skills">
+                  <li>Quantum Computing</li><li>Python</li><li>Algorithms</li><li>Research</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-row">
+              <p class="timeline-year">2024—</p>
+              <div class="timeline-copy">
+                <div class="timeline-main">
+                  <h3>Founder + Community Builder</h3>
+                  <p class="timeline-place">Pythias · Nuclear &amp; Fusion Society</p>
+                </div>
+                <p class="timeline-detail">Building scientific tools and communities around ambitious research.</p>
+                <ul class="chip-list skill-list" aria-label="Founder and Community Builder skills">
+                  <li>ML Strategy</li><li>Leadership</li><li>Product</li><li>Science Communication</li>
+                </ul>
+              </div>
+            </article>
           </div>
-        </article>
+        </section>
+      </section>
 
-        <article class="item">
-          <div class="meta">2025 — Present</div>
-          <div>
-            <h3>Research Assistant · Sun Lab</h3>
-            <p>
-              Building machine learning pipelines and running quantum chemical simulations
-              using PySCF and DMET to model molecular systems.
-            </p>
-          </div>
-        </article>
+      <footer class="footerbar">
+        <a class="linkedin-link" href="https://www.linkedin.com/in/chelsea-sisule/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </footer>
 
-        <article class="item">
-          <div class="meta">2024 — Present</div>
-          <div>
-            <h3>Research Assistant · Bello Lab</h3>
-            <p>
-              Built experimental workflows for immunofluorescence, western blot, and
-              C-fos quantification in vagus nerve tissue for diabetes-related research.
-            </p>
-          </div>
-        </article>
-
-        <article class="item">
-          <div class="meta">2024</div>
-          <div>
-            <h3>Research Assistant · Sagar Lab</h3>
-            <p>
-              Completed molecular docking experiments using AutoDock Vina to model protease
-              substrate selectivity for catalytic drug candidate design.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section aria-label="Work">
-      <div class="section-title">
-        <h2>Work</h2>
-        <p>Teaching, entrepreneurship, clinical, and outreach experience.</p>
-      </div>
-
-      <div class="stack">
-        <article class="item">
-          <div class="meta">Summer 2026</div>
-          <div>
-            <h3>Entrepreneurial Lead · NSF I-Corps Hub Northeast Region</h3>
-            <p>
-              Conducted customer discovery interviews, refined product direction, and developed
-              an early AI-enabled platform concept through accelerator mentorship.
-            </p>
-          </div>
-        </article>
-
-        <article class="item">
-          <div class="meta">2025</div>
-          <div>
-            <h3>Teaching Assistant · Functional Human Anatomy</h3>
-            <p>
-              Led study sessions and lab exercises covering core anatomical concepts while
-              supporting student comprehension and engagement.
-            </p>
-          </div>
-        </article>
-
-        <article class="item">
-          <div class="meta">2024 — 2026</div>
-          <div>
-            <h3>Work Assistant · Rutgers RWJMS Department of Medicine</h3>
-            <p>
-              Supported body donation programs by communicating with donors and families
-              and strengthening outreach around medical education.
-            </p>
-          </div>
-        </article>
-
-        <article class="item">
-          <div class="meta">Service</div>
-          <div>
-            <h3>Clinical Volunteer / EMS / STEM Outreach</h3>
-            <p>
-              Experience across preventive screenings, hospital volunteering, EMS, and youth
-              STEM education through Princeton Plasma Physics Lab outreach.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section aria-label="Presentations">
-      <div class="section-title">
-        <h2>Writing</h2>
-        <p>Publications, posters, and research communication.</p>
-      </div>
-
-      <div class="stack">
-        <article class="item">
-          <div class="meta">Manuscript</div>
-          <div>
-            <h3>Mitragynine and Glucose Homeostasis</h3>
-            <p>
-              Co-author on a manuscript in submission to Scientific Reports on Mitragynine,
-              insulin signaling, and glucose homeostasis in male mice.
-            </p>
-          </div>
-        </article>
-
-        <article class="item">
-          <div class="meta">ACS 2026</div>
-          <div>
-            <h3>HIV-1 Drug Discovery via Diffusion-Based Generative Modeling</h3>
-            <p>
-              Poster presentation accepted for the ACS National Meeting on NNRTI candidate
-              generation and computational drug discovery.
-            </p>
-          </div>
-        </article>
-
-        <article class="item">
-          <div class="meta">ACS 2026</div>
-          <div>
-            <h3>Computational Optimization of cART Regimens</h3>
-            <p>
-              Poster presentation accepted for the ACS National Meeting on molecular dynamics
-              and machine learning for antiretroviral therapy optimization.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section aria-label="Tools">
-      <div class="section-title">
-        <h2>Tools</h2>
-        <p>
-          Python, R, TypeScript, SQL, PySCF, DMET, diffusion models, molecular dynamics,
-          Docker, AWS, FastAPI, React, and Tailwind CSS.
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      <span>© 2026 Chelsea Sisule</span>
-      <a href="mailto:cssisule@yahoo.com">cssisule@yahoo.com</a>
-    </footer>
-  </main>
-</body>
+      <audio id="background-audio" src="assets/game-over-ii.mp3" loop preload="metadata"></audio>
+    </main>
+  </body>
 </html>
